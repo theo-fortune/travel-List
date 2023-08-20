@@ -12,9 +12,17 @@ const Form = () => {
   );
 };
 
-const Packing = () => {
-  return <div className="list">LIST</div>;
+const PackingList = () => {
+  return <ul className="list">
+    {initialItems.map((Item) => (
+      <Item Item={Item} />
+    ))}
+  </ul>;
 };
+
+const Item = ({ Item }) => {
+  return <li></li>
+}
 
 const Stats = () => {
   return (
@@ -33,7 +41,7 @@ const App = () => {
   return <div className="app">
     <Logo />
     <Form />
-    <Packing />
+    <PackingList />
     <Stats />
   </div>;
 };
